@@ -62,6 +62,7 @@ ekle.addEventListener("click", function (e) {
   let remove = document.createElement("button");
   liler.innerHTML = inputField.value;
   liler.style.marginBottom = "8px";
+  liler.style.fontWeight = "700";
   ulLer.appendChild(liler);
   inputField.value = " ";
   remove.innerHTML = "X";
@@ -71,7 +72,8 @@ ekle.addEventListener("click", function (e) {
   remove.style.height = "25px";
   remove.style.marginLeft = "15px";
   remove.style.borderRadius = "13px";
-  remove.style.border = "3px solid  rgb(139, 137, 102)";
+  remove.style.fontWeight = "700";
+  remove.style.border = " 3px solid rgb(182, 173, 5)";
   liler.appendChild(remove);
 
   remove.addEventListener("click", function () {

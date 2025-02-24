@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  color: rgb(197, 187, 6);
-  background-color: rgb(56, 51, 51);
+  color: rgb(2, 2, 2);
+  background-color: rgb(249, 245, 245);
 }
 
 @media (max-width: 767px) {
@@ -14,7 +14,7 @@
     width: 300px;
     margin: 10px 30px;
     margin-top: 20px;
-    background-color: rgb(82, 79, 7);
+    background-color: rgb(235, 234, 232);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@
   .h2-place {
     padding: 8px;
     border-radius: 15px;
-    border: 4px solid rgb(139, 137, 102);
+    border: 3px solid rgb(182, 173, 5);
   }
   .btn {
     display: flex;
@@ -45,6 +45,7 @@
     font-size: 22px;
     margin-bottom: 150px;
     margin-left: 30px;
+    font-weight: bold;
   }
 
   .counter {
@@ -57,25 +58,26 @@
     margin-left: 80px;
     font-size: 70px;
     border-radius: 150px;
-    border: 4px solid rgb(139, 137, 102);
+    border: 3px solid rgb(182, 173, 5);
   }
 
   .reset {
     width: 40px;
     height: 40px;
     margin-left: 30px;
+    font-weight: 700;
     margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
     cursor: pointer;
-    border: 3px solid rgb(139, 137, 102);
+    border: 3px solid rgb(182, 173, 5);
   }
 
   .yapilacak {
     margin-left: 80px;
-    border: 4px solid rgb(139, 137, 102);
+    border: 3px solid rgb(182, 173, 5);
     border-radius: 15px;
     padding: 8px;
     margin-bottom: 30px;
@@ -86,7 +88,7 @@
     font-size: 20px;
     cursor: pointer;
     border-radius: 15px;
-    border: 3px solid rgb(139, 137, 102);
+    border: 3px solid rgb(182, 173, 5);
   }
   .toDoField {
     display: flex;
@@ -106,9 +108,10 @@
     width: 60px;
     height: 30px;
     font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 15px;
-    border: 3px solid rgb(139, 137, 102);
+    border: 3px solid rgb(182, 173, 5);
   }
   .rutinler {
     display: flex;
@@ -120,12 +123,13 @@
     margin-top: 50px;
     padding: 8px;
     border-radius: 15px;
-    border: 4px solid rgb(139, 137, 102);
+    border: 3px solid rgb(182, 173, 5);
   }
   .labeller {
     margin-right: 50px;
     margin-top: 30px;
     font-size: 22px;
+    font-weight: bold;
     gap: 15px;
     margin-bottom: 20px;
   }
@@ -138,7 +142,7 @@
     background-color: rgb(199, 196, 142);
   }
   input[type="checkbox"]:checked {
-    background-color: rgb(199, 212, 82);
-    border: 7px solid rgb(173, 103, 18);
+    background-color: rgb(241, 241, 237);
+    border: 7px solid rgb(7, 4, 29);
   }
 }
