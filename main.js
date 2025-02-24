@@ -50,6 +50,7 @@ const selectedCumle = cumleler[dayIndex % cumleler.length];
 document.querySelector(".cumle").innerText = selectedCumle;
 
 // toDo Place
+
 let ekle = document.getElementById("ekleButton");
 let inputField = document.getElementById("inputPlace");
 let ulLer = document.getElementById("ulLer");
@@ -64,6 +65,7 @@ ekle.addEventListener("click", function () {
   inputField.value = " ";
   remove.innerHTML = "X";
   remove.classList = "remove";
+  remove.style.cursor = "pointer";
   remove.style.width = "25px";
   remove.style.height = "25px";
   remove.style.marginLeft = "15px";

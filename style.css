@@ -69,6 +69,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 20px;
+    cursor: pointer;
     border: 3px solid rgb(139, 137, 102);
   }
 
@@ -83,6 +84,7 @@
     width: 230px;
     padding: 6px;
     font-size: 20px;
+    cursor: pointer;
     border-radius: 15px;
     border: 3px solid rgb(139, 137, 102);
   }
@@ -104,6 +106,7 @@
     width: 60px;
     height: 30px;
     font-size: 16px;
+    cursor: pointer;
     border-radius: 15px;
     border: 3px solid rgb(139, 137, 102);
   }
