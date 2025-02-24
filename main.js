@@ -56,7 +56,8 @@ let inputField = document.getElementById("inputPlace");
 let ulLer = document.getElementById("ulLer");
 let remove = document.createElement("button");
 
-ekle.addEventListener("click", function () {
+ekle.addEventListener("click", function (e) {
+  e.preventDefault();
   let liler = document.createElement("li");
   let remove = document.createElement("button");
   liler.innerHTML = inputField.value;
