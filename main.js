@@ -53,10 +53,25 @@ document.querySelector(".cumle").innerText = selectedCumle;
 let ekle = document.getElementById("ekleButton");
 let inputField = document.getElementById("inputPlace");
 let ulLer = document.getElementById("ulLer");
+let remove = document.createElement("button");
 
 ekle.addEventListener("click", function () {
   let liler = document.createElement("li");
+  let remove = document.createElement("button");
   liler.innerHTML = inputField.value;
+  liler.style.marginBottom = "8px";
   ulLer.appendChild(liler);
   inputField.value = " ";
+  remove.innerHTML = "X";
+  remove.classList = "remove";
+  remove.style.width = "25px";
+  remove.style.height = "25px";
+  remove.style.marginLeft = "15px";
+  remove.style.borderRadius = "13px";
+  remove.style.border = "3px solid  rgb(139, 137, 102)";
+  liler.appendChild(remove);
+
+  remove.addEventListener("click", function () {
+    ulLer.removeChild(liler);
+  });
 });
