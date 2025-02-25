@@ -1,3 +1,5 @@
+//ZİKİRMATİK
+
 let btn = document.querySelector("button");
 document.querySelector(".counter").textContent = localStorage.getItem("counter")
   ? localStorage.getItem("counter")
@@ -49,9 +51,7 @@ const selectedCumle = cumleler[dayIndex % cumleler.length];
 
 document.querySelector(".cumle").innerText = selectedCumle;
 
-// Yasin Place
-
-// toDo Place
+// TODO PLACE
 
 let ekle = document.getElementById("ekleButton");
 let inputField = document.getElementById("inputPlace");
@@ -63,10 +63,12 @@ ekle.addEventListener("click", function (e) {
   let liler = document.createElement("li");
   let remove = document.createElement("button");
   liler.innerHTML = inputField.value;
+  liler.classList = "liler";
   liler.style.marginBottom = "8px";
   liler.style.fontWeight = "700";
   ulLer.appendChild(liler);
   inputField.value = " ";
+
   remove.innerHTML = "X";
   remove.classList = "remove";
   remove.style.cursor = "pointer";
@@ -81,4 +83,61 @@ ekle.addEventListener("click", function (e) {
   remove.addEventListener("click", function () {
     ulLer.removeChild(liler);
   });
+});
+
+// YASİN PLACE
+
+let yasinPlace = document.querySelector(".yasinSay span");
+
+let yasinEkle = document.querySelector(".yasinEkle");
+
+let azalt = document.querySelector(".azalt");
+
+yasinEkle.addEventListener("click", (e) => {
+  e.preventDefault();
+  let yasinEkleNum = parseInt(yasinPlace.textContent);
+  yasinEkleNum += 1;
+  yasinPlace.textContent = yasinEkleNum;
+  localStorage.setItem("Ekleme", yasinPlace.textContent);
+});
+
+azalt.addEventListener("click", (e) => {
+  e.preventDefault();
+  let azaltNum = parseInt(yasinPlace.textContent);
+  azaltNum--;
+  yasinPlace.textContent = azaltNum;
+  localStorage.setItem("Azaltma", yasinPlace.textContent);
+});
+
+window.onload = function () {
+  let getEkleme = localStorage.getItem("Ekleme");
+  if (getEkleme) {
+    yasinPlace.textContent = getEkleme;
+  }
+  let getAzaltma = localStorage.getItem("Azaltma");
+  if (getAzaltma) {
+    yasinPlace.textContent = getAzaltma;
+  }
+};
+
+//RUTİNLER
+
+let rutinler = document.querySelectorAll(".rutinler input[type='checkbox']");
+
+rutinler.forEach((checkbox, index) => {
+  checkbox.addEventListener("change", () => {
+    let checkboxesState = Array.from(rutinler).map(
+      (checkbox) => checkbox.checked
+    );
+
+    localStorage.setItem("checkboxesState", JSON.stringify(checkboxesState));
+  });
+});
+window.addEventListener("load", () => {
+  let savedState = JSON.parse(localStorage.getItem("checkboxesState"));
+  if (savedState) {
+    rutinler.forEach((checkbox, index) => {
+      checkbox.checked = savedState[index];
+    });
+  }
 });
