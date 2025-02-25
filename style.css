@@ -114,6 +114,46 @@
     border-radius: 15px;
     border: 3px solid rgb(182, 173, 5);
   }
+
+  .yasinler h2 {
+    width: 100px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 3px solid rgb(182, 173, 5);
+  }
+
+  .yasinSay {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 150px;
+    margin-left: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    margin-top: 80px;
+  }
+  .yasinEkle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 130px;
+    border: 3px solid black;
+  }
+  .azalt {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 180px;
+    border: 3px solid black;
+  }
+
   .rutinler {
     display: flex;
     flex-direction: column;
