@@ -49,6 +49,8 @@ const selectedCumle = cumleler[dayIndex % cumleler.length];
 
 document.querySelector(".cumle").innerText = selectedCumle;
 
+// Yasin Place
+
 // toDo Place
 
 let ekle = document.getElementById("ekleButton");
