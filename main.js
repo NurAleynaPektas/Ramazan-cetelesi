@@ -56,18 +56,36 @@ document.querySelector(".cumle").innerText = selectedCumle;
 let ekle = document.getElementById("ekleButton");
 let inputField = document.getElementById("inputPlace");
 let ulLer = document.getElementById("ulLer");
-let remove = document.createElement("button");
+
+document.addEventListener("DOMContentLoaded", function () {
+  let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
+  todoList.forEach((item) => {
+    addItemToList(item);
+  });
+});
 
 ekle.addEventListener("click", function (e) {
   e.preventDefault();
+  let todoText = inputField.value.trim();
+
+  if (todoText !== "") {
+    addItemToList(todoText);
+    inputField.value = "";
+    let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
+    todoList.push(todoText);
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+  }
+});
+
+function addItemToList(todoText) {
   let liler = document.createElement("li");
   let remove = document.createElement("button");
-  liler.innerHTML = inputField.value;
+
+  liler.innerHTML = todoText;
   liler.classList = "liler";
   liler.style.marginBottom = "8px";
   liler.style.fontWeight = "700";
   ulLer.appendChild(liler);
-  inputField.value = " ";
 
   remove.innerHTML = "X";
   remove.classList = "remove";
@@ -82,8 +100,14 @@ ekle.addEventListener("click", function (e) {
 
   remove.addEventListener("click", function () {
     ulLer.removeChild(liler);
+    let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
+    let index = todoList.indexOf(todoText);
+    if (index > -1) {
+      todoList.splice(index, 1);
+      localStorage.setItem("todoList", JSON.stringify(todoList));
+    }
   });
-});
+}
 
 // YASİN PLACE
 
@@ -98,7 +122,7 @@ yasinEkle.addEventListener("click", (e) => {
   let yasinEkleNum = parseInt(yasinPlace.textContent);
   yasinEkleNum += 1;
   yasinPlace.textContent = yasinEkleNum;
-  localStorage.setItem("Ekleme", yasinPlace.textContent);
+  localStorage.setItem("yasinSay", yasinPlace.textContent);
 });
 
 azalt.addEventListener("click", (e) => {
@@ -106,17 +130,13 @@ azalt.addEventListener("click", (e) => {
   let azaltNum = parseInt(yasinPlace.textContent);
   azaltNum--;
   yasinPlace.textContent = azaltNum;
-  localStorage.setItem("Azaltma", yasinPlace.textContent);
+  localStorage.setItem("yasinSay", yasinPlace.textContent);
 });
 
 window.onload = function () {
-  let getEkleme = localStorage.getItem("Ekleme");
-  if (getEkleme) {
-    yasinPlace.textContent = getEkleme;
-  }
-  let getAzaltma = localStorage.getItem("Azaltma");
-  if (getAzaltma) {
-    yasinPlace.textContent = getAzaltma;
+  let getYasinSay = localStorage.getItem("yasinSay");
+  if (getYasinSay) {
+    yasinPlace.textContent = getYasinSay;
   }
 };
 
@@ -141,3 +161,5 @@ window.addEventListener("load", () => {
     });
   }
 });
+
+//MUKABELE

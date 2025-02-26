@@ -12,8 +12,9 @@
   }
   .cetele {
     width: 300px;
-    margin: 10px 30px;
+    margin-left: 20px;
     margin-top: 20px;
+    padding: 8px;
     background-color: rgb(235, 234, 232);
     display: flex;
     align-items: center;
@@ -28,6 +29,8 @@
     margin-bottom: 50px;
     gap: 10px;
   }
+
+  /*ZİKİRMATİK*/
 
   .h2-place {
     padding: 8px;
@@ -76,6 +79,8 @@
     border: 3px solid rgb(182, 173, 5);
   }
 
+  /*TODO PLACE*/
+
   .yapilacak {
     margin-left: 80px;
     border: 3px solid rgb(182, 173, 5);
@@ -115,9 +120,12 @@
     border: 3px solid rgb(182, 173, 5);
   }
 
+  /*YASİNLER*/
+
   .yasinler h2 {
     width: 100px;
     margin-left: 121px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,6 +169,8 @@
     border: 3px solid rgb(182, 173, 5);
   }
 
+  /*RUTİNLER*/
+
   .rutinler {
     margin-top: 120px;
     display: flex;
@@ -193,5 +203,32 @@
   input[type="checkbox"]:checked {
     background-color: rgb(241, 241, 237);
     border: 7px solid rgb(7, 4, 29);
+  }
+
+  /*MUKABELE*/
+  .mukabele {
+    width: 150px;
+    padding: 8px;
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    border-radius: 15px;
+    border: 3px solid rgb(182, 173, 5);
+  }
+
+  .mukabeleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .mukabeleLabel {
+    width: calc(33.33% - 15px);
+    font-size: 25px;
+    font-weight: 700;
   }
 }
