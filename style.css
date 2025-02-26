@@ -42,12 +42,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
-  }
-  .cumle {
-    font-size: 22px;
-    margin: 18px;
-    font-weight: bold;
+    margin-bottom: 90px;
   }
 
   .counter {
@@ -76,6 +71,14 @@
     padding: 5px;
     cursor: pointer;
     border: 3px solid rgb(182, 173, 5);
+  }
+
+  .cumle {
+    font-size: 22px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: rgb(182, 173, 5);
+    margin-bottom: 50px;
   }
 
   .paragraph {
