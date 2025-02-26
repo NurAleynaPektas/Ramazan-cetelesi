@@ -163,3 +163,20 @@ window.addEventListener("load", () => {
 });
 
 //MUKABELE
+
+window.addEventListener("load", function () {
+  document.querySelectorAll(".day").forEach(function (checkbox) {
+    const day = checkbox.name;
+
+    const isChecked = localStorage.getItem(day) === "true";
+    checkbox.checked = isChecked;
+  });
+});
+
+document.querySelectorAll(".day").forEach(function (checkbox) {
+  checkbox.addEventListener("change", function () {
+    const day = checkbox.name;
+
+    localStorage.setItem(day, checkbox.checked);
+  });
+});
