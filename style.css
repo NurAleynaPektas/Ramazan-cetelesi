@@ -46,7 +46,6 @@
   }
   .cumle {
     font-size: 22px;
-    margin-bottom: 150px;
     margin-left: 18px;
     font-weight: bold;
   }
@@ -79,6 +78,20 @@
     border: 3px solid rgb(182, 173, 5);
   }
 
+  .paragraph {
+    margin-bottom: 100px;
+  }
+  .paragraph p {
+    margin: 18px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .paragraphSpan {
+    color: rgb(182, 173, 5);
+  }
+
   /*TODO PLACE*/
 
   .yapilacak {
@@ -86,7 +99,7 @@
     border: 3px solid rgb(182, 173, 5);
     border-radius: 15px;
     padding: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
   #inputPlace {
     width: 230px;
@@ -223,12 +236,12 @@
   .mukabeleContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
   }
 
   .mukabeleLabel {
-    width: calc(33.33% - 15px);
-    font-size: 25px;
+    width: calc(33.33% - 10px);
+    font-size: 22px;
     font-weight: 700;
   }
 }

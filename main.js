@@ -29,12 +29,10 @@ reset.addEventListener("click", function () {
 
 const cumleler = [
   "Allah'ım, sana hamd olsun.",
-  "Subhanallah, her şey senin kudretindedir.",
-  "La ilahe illallah, yalnızca Sen varsın.",
-  "Bismillah, her işin başı Senin adındır.",
+  "Yeni güne Bismillah",
   "Allah'ın rahmeti üzerimize olsun.",
-  "Ya Allah, yardımınla her zorluğu aşarım.",
-  "Rabbiniz, affedicidir, rahmet sahibidir.",
+  "Allahım, yardımınla her zorluğu aşarım.",
+  "Rabbim, affedersen, rahmet sahibisin.",
   "Şükredenlerin kalbi huzurludur.",
   "Zorluklarla birlikte kolaylık vardır.",
   "Allah, sabredenlerle beraberdir.",
