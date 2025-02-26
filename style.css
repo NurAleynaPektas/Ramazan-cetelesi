@@ -83,13 +83,14 @@
   }
   .paragraph p {
     margin: 18px;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 700;
     margin-bottom: 30px;
   }
 
   .paragraphSpan {
     color: rgb(182, 173, 5);
+    text-decoration: underline;
   }
 
   /*TODO PLACE*/
@@ -234,7 +235,9 @@
   }
 
   .mukabeleContainer {
+    margin: 20px;
     display: flex;
+
     flex-wrap: wrap;
     gap: 10px;
   }
